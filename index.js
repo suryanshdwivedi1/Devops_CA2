@@ -8,6 +8,10 @@ app.get('/health', (req, res) => {
     });
 });
 
+app.get('/', (req, res) => {
+    res.send('devops_ca2 is running');
+});
+
 const PORT = 3000;
 
 app.listen(PORT, () => {
