@@ -5,7 +5,7 @@ on:
     branches: [ "main" ]
 
 jobs:
-  build-test-deploy:
+  build-test:
     runs-on: ubuntu-latest
 
     steps:
@@ -25,6 +25,3 @@ jobs:
 
     - name: Build Docker Image
       run: docker build -t devops_ca2 .
-
-    - name: Run Docker Container
-      run: docker run -d -p 3000:3000 devops_ca2
